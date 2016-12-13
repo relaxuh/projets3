@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -16,7 +18,7 @@
     <!-- <? //php $ctrl = new Controller?> -->
 
     <!--inclure contenu de la page à charger-->
-    <?php
+    <?php 
       include_once("creerservicetest1.php");
     ?>
 
