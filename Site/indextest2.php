@@ -8,6 +8,13 @@
   </head>
 
   <body>
+    <div id='bandeau'>
+      <div id='logo'>
+      <img src="logo.png" alt="logo"/>
+      </div>
+      <?php
+       include_once("connexion.php");
+      ?>
     <!--inclure Header-->
     <?php
      include_once("menutest1.html");
@@ -25,5 +32,6 @@
     <?php
       include_once("Footer.php");
     ?>
+  </div>
   </body>
 </html>
