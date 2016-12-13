@@ -93,12 +93,27 @@ select
 footer {
     background:#FE2E2E;
     margin-top : 435px;
+}
 
-
-
-
-
-
-
+div#div1
+{
+  width: 500px;
+  margin-left: 15%;
+  padding-left: 15%;
+  margin-top : -80px;
+  margin-bottom: auto;
+  margin-right:auto;
+  margin-left: 27.5%;
+  text-align: center;
+  background-color : DCDCDC;
 
 }
+
+div#mdp{
+  margin-left : -12%;
+}
+
+div#connect{
+  text-align: center;
+}
+
