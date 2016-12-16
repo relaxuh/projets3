@@ -7,7 +7,9 @@ html, body
 
 body
 {
-  background: url("wall4.jpeg");
+  margin:0;
+padding:0;
+  background: url("rouge.png");
  font-family: Verdana, sans-serif;
  font-size: 100%;
 }
@@ -32,11 +34,15 @@ h2
 
 form
 {
+  margin:0;
+padding:0;
 	margin-left: 25%;
 }
 
 form2
 {
+  margin:0;
+padding:0;
 	margin-left: 75%;
 }
 
@@ -48,9 +54,11 @@ form2
 
 
 #bandeau {
+
+    box-shadow:1px 1px 6px #000000;
 margin-left: auto;
 margin-right: auto;
-background-color: #EFF2FB;
+background-color: #FFFFFF;
 width : 900px;
 height : 1200px;
 border: 1px solid #000000;
@@ -68,11 +76,11 @@ select
 
 .nav {
  width: 100%;
- margin:;
+ margin:0;
   padding:0;
   float:left;
   list-style-type: none;
-  background:#FE2E2E;
+  background: url("menu.png");
   vertical-align: top;
 }
 
@@ -86,11 +94,17 @@ select
 {
   color:#fff;
   text-decoration:none;
-  font-family: cursive;
+  font-family: Arial;
   font-weight:300;
 }
 
 footer {
+<<<<<<< HEAD
+    background: url("footer.png");
+    margin-top : 980px;
+    text-align: right;
+    color:#FFFFFF
+=======
     background:#FE2E2E;
     margin-top : 435px;
 }
@@ -106,6 +120,7 @@ div#div1
   margin-left: 27.5%;
   text-align: center;
   background-color : DCDCDC;
+>>>>>>> origin/master
 
 }
 
