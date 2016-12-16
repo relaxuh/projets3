@@ -37,9 +37,8 @@
 
           if (pg_numrows($id)!=0)
           {
-            echo $id;
-            $_SESSION['login'] = pg_fetch_array($id,0);
-            echo $_SESSION['login'];
+            $temp = pg_fetch_array($id,0);
+            $_SESSION['login'] = $temp[0];
           }
         }
         catch(Exception $e)
@@ -71,9 +70,9 @@
       if ((!empty($_SESSION['login'])))
       {//deja co
         //changer div
-         echo '<a href="profil.php" title="Accédez à votre profil">Mon profil</a>
+         echo '<a href="profil.php" title="Accédez à votre profil">'.$_SESSION['login'].'</a>
          <form action="indextest2.php" method="post">
-            <input type="submit" value="Val" name="Val">
+            <input type="submit" value="Déconnexion" name="Val">
          </form>';
          //include_once("connexion.php");
 
