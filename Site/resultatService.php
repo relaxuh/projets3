@@ -8,10 +8,10 @@
  	{
  		echo 'Erreur :'.$e->getMessage();
  	}
-	$stmt = pg_exec ($bdd,"SELECT type FROM Service");
+	$stmt = pg_exec($bdd,"SELECT type FROM Service");
 	for ($i=0; $i<pg_numrows($stmt); $i++) 
 	{
-        $ligne= pg_fetch_array ($stmt, $i);
+        $ligne= pg_fetch_array($stmt, $i);
         echo 'Service : '.$ligne['type'].'<br />';
     }
 ?>
