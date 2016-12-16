@@ -3,54 +3,51 @@
 
 ?>
 
-
-
 <?php
     if(isset($_POST['Val']))
-     {
-        session_destroy();
-        $_SESSION = array();
-        session_destroy();
+    {
+      session_destroy();
+      $_SESSION = array();
+      session_destroy();
+    }
+    if(isset($_POST['btn_valider']))
+    {
+      $uname = strip_tags($_POST['Pseudo']);
+      $upswd = strip_tags($_POST['Password']);
+      if($uname=="")  
+      {
+        $error[] = "Nom invalide";
       }
+      else if($upswd=="") 
+      {
+        $error[] = 'Mot de passe invalide';
+      }
+      $bdd = pg_connect('host=51.254.205.0 port=5432 dbname=ProjetPHP-Mitrail user=mitrail password=mitrail');
 
+      if(isset($erreur))
+      {
+        echo $erreur;
+      }
+      else
+      {
+        try
+        {
+          $id = pg_exec($bdd,"SELECT Login FROM Compte WHERE login = '$uname' AND mdp = '$upswd'")
+          or die(print_r($bdd->errorInfo(), true));
 
-
-     if(isset($_POST['btn_valider']))
-     {
-        $uname = strip_tags($_POST['Pseudo']);
-        $upswd = strip_tags($_POST['Password']);
-        if($uname=="")  
+          if (pg_numrows($id)!=0)
           {
-            $error[] = "Nom invalide";
+            echo 'bonjour';
+            $_SESSION['login'] = pg_fetch_array($id,0);
+            echo $_SESSION['login'];
           }
-        else if($upswd=="") 
-        {
-          $error[] = 'Mot de passe invalide';
         }
-        $bdd = pg_connect('host=51.254.205.0 port=5432 dbname=ProjetPHP-Mitrail user=mitrail password=mitrail');
-
-
-        if(isset($erreur))
+        catch(Exception $e)
         {
-          echo $erreur;
-        }
-      
-        else
-        {
-          try
-          {
-            $id = pg_exec($bdd,"SELECT Login FROM Compte WHERE login = '$uname' AND mdp = '$upswd'")
-             or die(print_r($bdd->errorInfo(), true));
-
-             if (pg_numrows($id)!=0)
-              {
-                $_SESSION['login'] = pg_fetch_array($id,0);
-                echo $_SESSION['login'];
-              }
-          }
-          catch(Exception $e){echo 'Erreur';}
+          echo 'Erreur';
         }
       }
+    }
 
 ?>
 
@@ -84,7 +81,7 @@
       else
       {//afficher le module de co
         //changer div
-         echo '<a href="connexion.php" title="Accès à la page de connexion">Connexion</a>';
+         echo '<a href="connexion.php" title="Accès à la page de connexion"></a>';
          include_once("connexion.php");
       }
     ?>
