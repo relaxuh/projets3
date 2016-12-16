@@ -37,7 +37,7 @@
 
           if (pg_numrows($id)!=0)
           {
-            echo 'bonjour';
+            echo $id;
             $_SESSION['login'] = pg_fetch_array($id,0);
             echo $_SESSION['login'];
           }
