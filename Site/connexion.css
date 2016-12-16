@@ -1,23 +1,17 @@
 
 div#div1{
+	margin-top : 150px;
 
-	width: 500px;
 
-	margin-left: 15%;
-	padding-left: 15%;
-		margin-top : -80px;
-    margin-bottom: auto;
-    margin-right:auto;
-    margin-left: 27.5%;
+
+
+
 	text-align: center;
-	background-color : DCDCDC;
 
-}
 
-div#mdp{
-	margin-left : -12%;
 }
 
 div#connect{
-	text-align: center;
+	margin-left: : 50px;
+	position: absolute;
 }

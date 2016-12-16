@@ -25,20 +25,7 @@
 			<div>
 
 				<p>
-					<a href="#">Home</a>
-					·
-					<a href="#">Blog</a>
-					·
-					<a href="#">Pricing</a>
-					·
-					<a href="#">About</a>
-					·
-					<a href="#">Faq</a>
-					·
-					<a href="#">Contact</a>
-				</p>
-
-				<p>Groupe des 5 &copy; 2016</p>
+					© 2016 Handicap All Rights Reserved</p>
 			</div>
 
 		</footer>
