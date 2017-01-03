@@ -77,6 +77,7 @@ select
 .nav {
  width: 100%;
  margin:0;
+ margin-top: 50px;
   padding:0;
   float:left;
   list-style-type: none;
@@ -99,12 +100,9 @@ select
 }
 
 footer {
-<<<<<<< HEAD
-    background: url("footer.png");
     margin-top : 980px;
     text-align: right;
     color:#FFFFFF
-=======
     background:#FE2E2E;
     margin-top : 435px;
 }
@@ -114,14 +112,11 @@ div#div1
   width: 500px;
   margin-left: 15%;
   padding-left: 15%;
-  margin-top : -80px;
+  margin-top : 0px;
   margin-bottom: auto;
   margin-right:auto;
   margin-left: 27.5%;
   text-align: center;
-  background-color : DCDCDC;
->>>>>>> origin/master
-
 }
 
 div#mdp{
@@ -130,5 +125,12 @@ div#mdp{
 
 div#connect{
   text-align: center;
+  margin-left: : 50px;
+  position: absolute;
 }
+
+div#divResService{
+  
+}
+
 

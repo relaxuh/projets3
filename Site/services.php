@@ -3,11 +3,11 @@
 	<form action="index.php?param=resultatService.php" method="post">
       	<p>
       		Choisissez une ville : 
-      		<input type="text" name="nom" />
+      		<input type="text" name="ville" />
       	</p>
 	    <p>
 	    	Choisissez un type de service : 
-	    	<select name="ComboBox">
+	    	<select name="typeService">
 		  		<option>
 		  			Pharmacie
 		  		</option>
