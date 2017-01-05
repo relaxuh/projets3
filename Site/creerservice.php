@@ -1,31 +1,30 @@
-
-  		<h1> <!-- A changer en fonction du CSS voulu -->
-  			<br />
-  				Créer un service
-  			<br />
-  		</h1><!-- A changer en fonction du CSS voulu -->
-  		<h2><!-- A changer en fonction du CSS voulu -->
-  			<br />
-  				Nom : 
-  					<form action="formulaire.php"><!-- A changer en fonction du CSS voulu -->
-          				<text><input type="text" name="nom"></text>
-        			</form><!-- A changer en fonction du CSS voulu -->
-  			<br /><br />
-  				Date :
-  					<form action="formulaire.php"><!-- A changer en fonction du CSS voulu -->
-          				<input type="text" name="date">
-        			</form><!-- A changer en fonction du CSS voulu -->
-  			<br /><br />
-  				Type : 
-  					<form action="formulaire.php"><!-- A changer en fonction du CSS voulu -->
-          				<select name="type">
-          					<option value="Sortie">Sortie</option>
-          					<option value="Bonjour">Bonjour</option>
-          				</select>
-        			</form><!-- A changer en fonction du CSS voulu -->
-  			<br /><br /><br />
-  				<form2 action="formulaire.php"><!-- A changer en fonction du CSS voulu -->
-          			<input type="submit" value="Créer">
-        		</form2><!-- A changer en fonction du CSS voulu -->
-        	<br />
-  		</h2><!-- A changer en fonction du CSS voulu -->
+<br />
+  Créer un service
+<br />
+<br />
+  Choisir type de Service : 
+<form action="index.php?param=creationService.php" method="post">
+  <select name="type">
+    <?php 
+      $stmt = pg_exec($bdd,"SELECT type FROM Service GROUP BY type;");
+      for ($i=0; $i<pg_numrows($stmt); $i++)
+      {
+        $ligne = pg_fetch_array($stmt, $i);
+        $type = $ligne['type'];
+        echo '<option name="'.$type.'">'.$type."</option>";
+      }
+    ?>
+    <option name="Autre">Autre</option>
+  </select>
+  <br />
+    Si autre :
+  <br />
+    <input type="text" name="autre">
+  <br />
+    Description : 
+  <br />
+    <input type="text" name="description">
+<br /><br /><br />
+  <input type="submit" value="Créer">
+</form>
+<br />

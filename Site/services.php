@@ -1,5 +1,7 @@
-
 <div>
+	<form action="index.php?param=creerService.php" method="post">
+		<input type="submit" value="Créer un service">
+	</form>
 	<form action="index.php?param=resultatService.php" method="post">
       	<p>
       		Choisissez une ville : 
@@ -8,21 +10,15 @@
 	    <p>
 	    	Choisissez un type de service : 
 	    	<select name="typeService">
-		  		<option>
-		  			Pharmacie
-		  		</option>
-		  		<option>
-		  			Hôpital
-		  		</option>
-		  		<option>
-		  			Activité culturelle
-		  		</option>
-		  		<option>
-		  			Acitivité sportive
-		  		</option>
-		  		<option>
-		  			Autre
-		  		</option>
+		  		<?php
+		  			$stmt = pg_exec($bdd,"SELECT type FROM Service GROUP BY type;");
+        			for ($i=0; $i<pg_numrows($stmt); $i++)
+        			{
+        				$ligne = pg_fetch_array($stmt, $i);
+        				$type = $ligne['type'];
+        				echo '<option name="'.$type.'"">'.$type."</option>";
+        			}
+        		?>
 		  	</select>
 		</p>
 	    <p>
@@ -31,7 +27,4 @@
 	    	</div>
 	    </p>
 	</form>
-</div>
-	
-	
-	
+</div>	
