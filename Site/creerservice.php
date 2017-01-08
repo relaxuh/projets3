@@ -1,8 +1,6 @@
+
 <br />
-  Créer un service
-<br />
-<br />
-  Choisir type de Service : 
+  Choisir type de Service : <br />
 <form action="index.php?param=creationService.php" method="post">
   <select name="type">
     <?php 
@@ -16,14 +14,14 @@
     ?>
     <option name="Autre">Autre</option>
   </select>
-  <br />
+  <br /><br />
     Si autre :
   <br />
-    <input type="text" name="autre">
-  <br />
+    <input type="text" name="autre" size="50">
+  <br /><br />
     Description : 
   <br />
-    <input type="text" name="description">
+    <textarea cols="110" rows="25" name="description" ></textarea>
 <br /><br /><br />
   <input type="submit" value="Créer">
 </form>

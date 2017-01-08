@@ -14,6 +14,6 @@
         		}
       		?>
       		<?php
-        		include_once("menu.html");
+        		include_once("menu.php");
       		?>
       		<br /><br /><br />
