@@ -15,7 +15,8 @@
     	$stmtverif2 = pg_exec($bdd,"SELECT * FROM Compte WHERE login = '$pseudo' OR email = '$email'");
     	if(pg_numrows($stmtverif2)==0)
     	{
-    		$stmt = pg_exec($bdd,"INSERT INTO Compte VALUES('$pseudo', '$password', '$email', '$codepostal')");
+    		$stmt = pg_exec($bdd,"INSERT INTO Compte VALUES('$pseudo', '$password', '$email', '$codepostal');");
+            $stmt2 = pg_exec($bdd,"INSERT INTO CoordonneesUtilisateur VALUES('$pseudo', 'l\'adresse n\'a pas été renseignée', 'le numéro de téléphone n\'a pas été renseigné');");
     		echo 'Félicitations, vous avez bien été inscrit !!!';
     	}
     	else
