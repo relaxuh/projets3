@@ -20,7 +20,7 @@
 		}
 		else
 		{
-			echo "vous n'êtes pas connectés";
+			echo "Vous n'êtes pas connectés";
 		}
 	?>
 </div>

@@ -1,3 +1,4 @@
+</div>
 <footer>
 	<div>
 		<p>
@@ -9,7 +10,7 @@
 			<a href="index.php?param=contact.php">Contact</a>
 		</p>
 		<p>
-			Groupe des 5 &copy; 2016
+			GUEGAIN Edouard - POREZ Kévin - TSOUMBOU Robert - LECERF Valentin - HILBERER Maxime &copy; 2016 - 2017
 		</p>
 	</div>
 </footer>

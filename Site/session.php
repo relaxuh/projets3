@@ -4,7 +4,7 @@
   if(isset($_POST['Val']))
   {
     session_destroy();
-    $_SESSION = array();
+    session_start();
     session_destroy();
   }
   if(isset($_POST['connexion']))
