@@ -13,6 +13,7 @@
               $ville = $ligne['nom'];
               echo '<option name="'.$ville.'">'.$ville."</option>";
             }
+            echo '<option name="rien"></option>';
           ?>
       </select>
     </p>

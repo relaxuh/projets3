@@ -8,7 +8,6 @@
 		<li><a href="index.php?param=services.php">Mes services</a></li>';
 			}
 		?>
-		<li><a href="index.php?param=faq.php">FAQ</a></li>
 		<li><a href="index.php?param=apropos.php">A propos</a></li>
 		<li><a href="index.php?param=contact.php">Contact</a></li>
 	</ul>

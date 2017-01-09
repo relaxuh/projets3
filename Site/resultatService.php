@@ -18,7 +18,8 @@
                 Nom de l'entreprise : ".$ligne12['nom']."<br />
                 Adresse de l'entreprise : ".$ligne12['adresse'].", ".$ligne12['codepostal']." ".$ligne12['nomville']."<br />
                 Numéro de téléphone de l'entreprise : ".$ligne12['numtel']."<br />
-                email de l'entreprise : ".$ligne12['email']."<br />";
+                email de l'entreprise : ".$ligne12['email']."<br />
+                Description annonce : ".$ligne1['description']."<br /><br />";
     }
     echo "<br />";
     if ($ville!='')
@@ -38,6 +39,11 @@
                 Pseudo de l'utilisateur : ".$ligne22['login']."<br />
                 Adresse de l'utilisateur : ".$ligne22['adresse'].", ".$ligne22['codepostal']." ".$ligne22['nom']."<br />
                 Numéro de téléphone de l'utilisateur : ".$ligne22['numtel']."<br />
-                email de l'utilisateur : ".$ligne22['email']."<br />";
+                email de l'utilisateur : ".$ligne22['email']."<br />
+                Description annonce : ".$ligne2['description']."<br /><br />";
+    }
+    if (pg_numrows($stmt2)==0 && pg_numrows($stmt1)==0)
+    {
+        echo "Aucune entreprise et aucun utilisateur ne fournit ce service dans cette ville";
     }
 ?>
